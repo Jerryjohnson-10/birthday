@@ -1300,6 +1300,20 @@ audio {
         background-color: #466baf;
     }
 
+	/* Custom fix for Lishi's Birthday Mobile View */
+    @media only screen and (max-width: 500px) {
+    .balloons {
+        width: 65px !important;       /* Smaller width for balloons */
+        height: 120px !important;     /* Proportionate height */
+        background-size: 65px 120px !important; /* Matches the new width/height */
+    }
+
+    .balloons h2 {
+        font-size: 30px !important;   /* Smaller font to stay inside the balloon */
+        margin-top: 20px !important;  /* Centers the letter vertically */
+    }
+}
+
 
 
     /*controlling tablet width*/
