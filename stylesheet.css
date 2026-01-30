@@ -1300,17 +1300,19 @@ audio {
         background-color: #466baf;
     }
 
-	/* Custom fix for Lishi's Birthday Mobile View */
-    @media only screen and (max-width: 500px) {
+	/* Final Mobile Fix for Lishi's Birthday */
+@media only screen and (max-width: 480px) {
     .balloons {
-        width: 65px !important;       /* Smaller width for balloons */
-        height: 120px !important;     /* Proportionate height */
-        background-size: 65px 120px !important; /* Matches the new width/height */
+        width: 45px !important;        /* Very narrow to fit all 7 in a row */
+        height: 85px !important;       /* Adjusted height for proportions */
+        background-size: 45px 85px !important; 
+        margin: 0 1px !important;      /* Minimal space between them */
     }
 
     .balloons h2 {
-        font-size: 30px !important;   /* Smaller font to stay inside the balloon */
-        margin-top: 20px !important;  /* Centers the letter vertically */
+        font-size: 20px !important;    /* Small text to stay inside narrow balloons */
+        padding-top: 5px !important;   /* Adjusts letter position */
+        text-shadow: 2px 2px 2px #FFF !important; /* Smaller shadow for smaller text */
     }
 }
 
