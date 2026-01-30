@@ -1300,19 +1300,30 @@ audio {
         background-color: #466baf;
     }
 
-	/* Final Mobile Fix for Lishi's Birthday */
-@media only screen and (max-width: 480px) {
+	/* Final Force-Fit for Lishi's Birthday */
+@media only screen and (max-width: 500px) {
+    /* This forces the balloons into one row */
     .balloons {
-        width: 45px !important;        /* Very narrow to fit all 7 in a row */
-        height: 85px !important;       /* Adjusted height for proportions */
-        background-size: 45px 85px !important; 
-        margin: 0 1px !important;      /* Minimal space between them */
+        position: relative !important; /* Changes from fixed/absolute to flow in a row */
+        display: inline-block !important;
+        width: 13% !important;        /* Each balloon takes exactly 1/7th of the width */
+        height: auto !important;
+        bottom: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Force the container to not wrap */
+    .balloon-border {
+        white-space: nowrap !important;
+        display: block !important;
+        text-align: center !important;
     }
 
     .balloons h2 {
-        font-size: 20px !important;    /* Small text to stay inside narrow balloons */
-        padding-top: 5px !important;   /* Adjusts letter position */
-        text-shadow: 2px 2px 2px #FFF !important; /* Smaller shadow for smaller text */
+        font-size: 18px !important;    /* Small enough to never overflow */
+        display: block !important;     /* Ensure they are visible */
+        margin-top: 15px !important;
     }
 }
 
